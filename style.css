@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  .gallery {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  /* Adicionando responsividade para telas menores */
+  @media screen and (max-width: 600px) {
+    .gallery {
+      flex-direction: column; /* Alterar para uma coluna quando a tela for menor que 600px */
+      align-items: center; /* Centralizar os itens quando estiver em uma coluna */
+    }
+  }
+  
