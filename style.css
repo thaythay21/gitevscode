@@ -1,32 +1,53 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  background-color: rgb(0, 0, 0);
+}
+
+h1 {
+  font-family: arial;
+  font-size: 3em;
+  text-align: center;
+  margin: 25px;
+  padding: 50px;
+  background-color: rgb(0, 16, 161);
+  color:rgb(245, 245, 245);
+  overflow: hidden;
+}
+
+#flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  vertical-align: middle;
+  margin-top: 8px;
   
-  .gallery {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-  }
-  
+}
+
+.column:nth-child(even) {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+@media screen and (max-width: 800px) {
   .column {
-    display: flex;
-    flex-direction: column;
+    flex: 50%;
+    max-width: 50%;
   }
-  
-  img {
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
     max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
   }
-  
-  /* Adicionando responsividade para telas menores */
-  @media screen and (max-width: 600px) {
-    .gallery {
-      flex-direction: column; /* Alterar para uma coluna quando a tela for menor que 600px */
-      align-items: center; /* Centralizar os itens quando estiver em uma coluna */
-    }
-  }
-  
+}
