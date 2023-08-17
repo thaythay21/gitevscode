@@ -1,1 +1,1 @@
-Galeria de Fotos
+Galeria do riverdale
